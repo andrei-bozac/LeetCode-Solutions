@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        long ogl=0,copx=x;
+        if(x<0) return false;
+        while(copx)
+        {
+            ogl=ogl*10+copx%10;
+            copx/=10;
+        }
+        if(ogl==x) return true;
+           else return false;
+    }
+};
