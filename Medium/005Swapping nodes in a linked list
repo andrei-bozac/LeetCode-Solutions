@@ -1,0 +1,24 @@
+class Solution {
+public:
+    ListNode* swapNodes(ListNode* head, int k) {
+        int n=0;
+        ListNode* temp = head;
+        while(temp!=nullptr){
+            n++;
+            temp=temp->next;
+        }
+        ListNode* first = head;
+        for(int i=1;i<k;i++){
+            first = first->next;
+        }
+        ListNode* last = head;
+        for(int i=1;i<=n-k;i++){
+            last = last->next;
+        }
+        int swap = first->val;
+        first->val = last->val;
+        last->val = swap;
+        return head;
+        
+    }
+};
