@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int mostFrequentEven(vector<int>& nums) {
+        std::unordered_map<int,int> freq;
+        int n = nums.size();
+        int rez=-1;
+        int max_fr=0;
+       
+        for(int num:nums){
+            if(num%2==0){
+                freq[num]++;
+                int fr = freq[num];
+                if(fr>max_fr){
+                max_fr=fr;
+                rez=num;
+            } else if(fr==max_fr){
+                if(rez==-1 || num<rez) rez=num;
+            }
+            }
+            
+
+        }
+        return rez;
+        
+    }
+};
