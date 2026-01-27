@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int countElements(vector<int>& nums) {
+        int rez=0;
+        for(int i=0;i<nums.size();i++){
+            int gt=0, lt=0;
+            for(int j=0;j<nums.size();j++){
+                if(nums[j]<nums[i]){
+                    lt++;
+                }else if(nums[j]>nums[i]){
+                    gt++;
+                }
+                
+            }
+            if(gt!=0 && lt!=0) rez++;
+        }
+        return rez;
+    }
+};
