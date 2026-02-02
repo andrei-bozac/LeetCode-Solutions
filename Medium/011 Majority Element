@@ -1,0 +1,14 @@
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        std::unordered_map<int,int> freq;
+        std::vector<int> rez;
+        for(int x: nums){
+            freq[x]++;
+            if(freq[x]>(nums.size()/3) && std::find(rez.begin(),rez.end(),x)==rez.end()){
+                rez.push_back(x);
+            }
+        }
+        return rez;
+    }
+};
