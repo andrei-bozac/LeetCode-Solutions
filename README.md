@@ -1,4 +1,4 @@
 # LeetCode-Solutions
-Some of my LeetCode solutions <img width="1008" height="504" alt="1_MF2f1X45JTsPW_UyOq7buw" src="https://github.com/user-attachments/assets/e38f2aa4-ed8a-43b7-9cb7-be4b9c64de79" />
+<img width="1200" height="452" alt="0_aEOO843MJ-xKMCj4" src="https://github.com/user-attachments/assets/c2f87668-393d-47a2-8749-d40957d91a1a" />
 
 
