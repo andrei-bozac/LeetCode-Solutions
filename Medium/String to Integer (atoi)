@@ -1,0 +1,40 @@
+class Solution {
+public:
+    int myAtoi(string s) {
+        if (s.empty()) return 0;
+
+        long long result = 0;
+        int sign = 1;
+        int i = 0;
+
+        while (i < s.length() && s[i] == ' ') {
+            i++;
+        }
+
+        if (i < s.length() && (s[i] == '-' || s[i] == '+')) {
+            if (s[i] == '-') {
+                sign = -1;
+            }
+            i++;
+        }
+
+        for (; i < s.length(); i++) {
+            if (isdigit(s[i])) {
+                int d = s[i] - '0';
+
+                if (result > INT_MAX / 10 ||
+                    (result == INT_MAX / 10 &&
+                     d > (sign == -1 ? 8 : 7))) {
+                    return sign == -1 ? INT_MIN : INT_MAX;
+                }
+
+                result = result * 10 + d;
+            }
+            else {
+                break;
+            }
+        }
+
+        return result * sign;
+    }
+};
